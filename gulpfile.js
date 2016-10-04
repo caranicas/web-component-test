@@ -26,28 +26,22 @@ gulp.task('copy',() =>
 
 
 var ghPages  = require('gulp-gh-pages');
+
 gulp.task('pages-move', (done) => {
    gulp.src("./index.html")
-  .pipe(gulp.dest('./.publish'))
+  .pipe(gulp.dest('./pages-build'))
 
-  gulp.src("./demo")
- .pipe(gulp.dest('./.publish'))
+  gulp.src("./demo/*")
+ .pipe(gulp.dest('./pages-build/demo'))
 
-   gulp.src("./test")
-  .pipe(gulp.dest('./.publish'))
+   gulp.src("./test/*")
+  .pipe(gulp.dest('./pages-build/test/'))
 
   gulp.src("./bower_components/*")
- .pipe(gulp.dest('./.publish/bower_components'))
+ .pipe(gulp.dest('./pages-build/bower_components'))
 
   done();
 });
-
-
-gulp.task('pages-deploy', (ghPages) => {
-  ghPages();
-});
-
-
 
 gulp.task('serve',(done) => {
 
@@ -61,7 +55,13 @@ gulp.task('serve',(done) => {
   gulp.watch("src/**").on("change", gulp.series('transpile', 'copy', browserSync.reload));
 });
 
-gulp.task('deploy', gulp.series('pages-move', 'pages-deploy'));
+
+gulp.task('deploy', function() {
+  return gulp.src("./pages-build/**/*")
+    .pipe(ghPages({force:true}));
+});
+
+gulp.task('deploy-all', gulp.series('pages-move','deploy'));
 gulp.task('build', gulp.series('transpile', 'copy'));
 gulp.task('default', gulp.series('build', 'serve'));
 
