@@ -1,24 +1,25 @@
 {
-  "name": "pull-req",
-  "author": "kendrick",
+  "name": "web-component-test",
+  "author":"kendrick caranicas",
   "version": "1.0.0",
-  "description": "implementation",
+  "description": "nada",
   "repository": {
     "type": "git",
-    "url": "https://github.com/caranicas/pull-req.git"
+    "url": "https://github.com/caranicas/web-component-test.git"
   },
   "bugs": {
-    "url": "https://github.com/caranicas/pull-req/issues"
+    "url": "https://github.com/caranicas/web-component-test/issues"
   },
-  "license": "https://github.com/caranicas/pull-req/LICENSE.txt",
+  "license": "https://github.com/caranicas/web-component-test/LICENSE.txt",
   "scripts": {
-    "clean": "rm -rf pull-req && rm -rf bower_components/pull-req",
+    "clean": "rm -rf web-component-test && rm -rf bower_components/web-component-test",
     "build": "gulp",
-    "start": "npm run clean && npm run build"
+    "start":"npm run clean && npm run build"
   },
   "engines": {
     "node": ">=4.0"
   },
+
   "private": true,
   "devDependencies": {
     "babel-preset-es2015-node5": "^1.2.0",

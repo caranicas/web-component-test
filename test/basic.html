@@ -9,15 +9,15 @@
     <script src="../bower_components/test-fixture/test-fixture-mocha.js"></script>
 
     <!-- Step 1: import the element to test -->
-    <link rel="import" href="../bower_components/pull-req/pull-req.html">
+    <link rel="import" href="../bower_components/web-component-test/web-component-test.html">
     <link rel="import" href="../bower_components/test-fixture/test-fixture.html">
 </head>
 <body>
 
   <!-- You can use the document as a place to set up your fixtures. -->
-  <test-fixture id="pull-req">
+  <test-fixture id="web-component-test">
       <template>
-          <pull-req></pull-req>
+          <web-component-test></web-component-test>
       </template>
   </test-fixture>
 
@@ -25,12 +25,12 @@
     var elem;
 
     beforeEach(function() {
-      elem = fixture('pull-req');
+      elem = fixture('web-component-test');
     });
 
-    describe('<pull-req>', function() {
+    describe('<web-component-test>', function() {
 
-      a11ySuite('pull-req');
+      a11ySuite('web-component-test');
 
       // it('Passing test checking the prop', function() {
       //     expect(elem.prop1).to.be.equal('TEST');

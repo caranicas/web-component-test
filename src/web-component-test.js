@@ -1,7 +1,7 @@
 (function () {
 
   Polymer({
-    is: 'pull-req',
+    is: 'web-component-test',
 
     properties: {
       /**
@@ -49,9 +49,9 @@
      */
 
     /**
-     * Fired when pull-req does something
+     * Fired when web-component-test does something
      *
-     * @event pull-req-action
+     * @event web-component-test-action
      */
 
   })

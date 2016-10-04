@@ -1,14 +1,14 @@
 {
-  "name": "pull-req",
-  "author":"kendrick",
+  "name": "web-component-test",
+  "author":"kendrick caranicas",
   "version": "1.0.0",
-  "description": "implementation",
+  "description": "nada",
   "private": true,
-  "license": "https://github.com/caranicas/pull-req/LICENSE.txt",
-  "homepage": "https://github.com/caranicas/pull-req",
+  "license": "https://github.com/caranicas/web-component-test/LICENSE.txt",
+  "homepage": "https://github.com/caranicas/web-component-test",
   "repository": {
     "type": "git",
-    "url": "git://github.com/caranicas/pull-req.git"
+    "url": "git://github.com/caranicas/web-component-test.git"
   },
   "keywords": [
     "web-components",

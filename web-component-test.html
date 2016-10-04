@@ -10,36 +10,36 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 -->
 
 <!--
-Example: Use the pull-req
+Example: Use the web-component-test
 ```html
-<pull-req></pull-req>
+<web-component-test></web-component-test>
 ```
 
 ### Styling
 
 Custom property                  | Description                            | Default
 ---------------------------------|----------------------------------------|--------------------
-`--pull-req-width`     | Width of the element                   | 256px
+`--web-component-test-width`     | Width of the element                   | 256px
 
 
 @group tripod
-@element pull-req
+@element web-component-test
 @demo
 @test test/index.html
 -->
 
 
-<link rel="import" href="pull-req-styles.html">
+<link rel="import" href="web-component-test-styles.html">
 
-<dom-module id="pull-req">
+<dom-module id="web-component-test">
 
   <template>
 
-    <style include="pull-req-styles"></style>
+    <style include="web-component-test-styles"></style>
 
     <h1>Hello [[prop1]]</h1>
 
   </template>
 
-  <script src="pull-req.js"></script>
+  <script src="web-component-test.js"></script>
 </dom-module>
