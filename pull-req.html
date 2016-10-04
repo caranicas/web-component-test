@@ -1,0 +1,46 @@
+
+<link rel="import" href="../polymer/polymer.html">
+
+
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+-->
+
+<!--
+Example: Use the pull-req
+```html
+<pull-req></pull-req>
+```
+- if [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then wct -s 'default'; fi
+
+### Styling
+
+Custom property                  | Description                            | Default
+---------------------------------|----------------------------------------|--------------------
+`--pull-req-width`     | Width of the element                   | 256px
+
+
+@group tripod
+@element pull-req
+@demo
+@test test/index.html
+-->
+
+
+<link rel="import" href="pull-req-styles.html">
+
+<dom-module id="pull-req">
+
+  <template>
+
+    <style include="pull-req-styles"></style>
+
+    <h1>Hello [[prop1]]</h1>
+
+  </template>
+
+  <script src="pull-req.js"></script>
+</dom-module>

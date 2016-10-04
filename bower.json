@@ -1,0 +1,26 @@
+{
+  "name": "pull-req",
+  "author":"kendrick",
+  "version": "1.0.0",
+  "description": "implementation",
+  "private": true,
+  "license": "https://github.com/caranicas/pull-req/LICENSE.txt",
+  "homepage": "https://github.com/caranicas/pull-req",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/caranicas/pull-req.git"
+  },
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer"
+  ],
+  "dependencies": {
+    
+    "polymer": "Polymer/polymer#^1.6.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.7",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
+    "web-component-tester": "*"
+    
+  }
+}
