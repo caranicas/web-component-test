@@ -9,7 +9,7 @@
        */
       prop1: {
         type:String,
-        value :'TEST'
+        value :'TEST THE CACHE'
       }
     },
 
