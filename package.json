@@ -2,7 +2,7 @@
   "name": "web-component-test",
   "author":"kendrick caranicas",
   "version": "1.0.0",
-  "description": "nada",
+  "description": "tests the generator",
   "repository": {
     "type": "git",
     "url": "https://github.com/caranicas/web-component-test.git"
@@ -13,8 +13,9 @@
   "license": "https://github.com/caranicas/web-component-test/LICENSE.txt",
   "scripts": {
     "clean": "rm -rf web-component-test && rm -rf bower_components/web-component-test",
-    "build": "gulp",
-    "start":"npm run clean && npm run build"
+    "build-serve": "gulp",
+    "start":"npm run clean && npm run build-serve",
+    "pages":"npm run clean && gulp pages-deployment"
   },
   "engines": {
     "node": ">=4.0"

@@ -1,11 +1,11 @@
 ## web-component-test
 
 
-nada
+tests the generator
 
 
 **Demo**
-https://caranicas.github.io//web-component-test/
+https://caranicas.github.io/web-component-test/
 
 
 ---
