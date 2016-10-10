@@ -5,7 +5,7 @@ sudo: required
 cache:
   directories:
     - node_modules
-
+    - bower_components
 addons:
   firefox: latest
   sauce_connect: true
@@ -14,9 +14,12 @@ addons:
     - google-chrome
     packages:
     - google-chrome-stable
+
 before_script:
 - npm install -g bower polylint web-component-tester
 - bower install
+- gulp build
+
 script:
 - xvfb-run wct
 - if [ ${TRAVIS_PULL_REQUEST} != false ]; then wct -s 'default'; fi

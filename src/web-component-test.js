@@ -9,7 +9,7 @@
        */
       prop1: {
         type:String,
-        value :'TEST THE CACHE'
+        value :'TEST -- CACHE'
       }
     },
 
@@ -41,7 +41,7 @@
      * @return {null}
      */
     _bar: function () {
-      return null
+      return true;
     }
 
     /**
