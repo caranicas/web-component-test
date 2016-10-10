@@ -2,6 +2,10 @@ language: node_js
 node_js: stable
 dist: trusty
 sudo: required
+cache:
+  directories:
+    - node_modules
+
 addons:
   firefox: latest
   sauce_connect: true
@@ -14,6 +18,5 @@ before_script:
 - npm install -g bower polylint web-component-tester
 - bower install
 script:
-- xvfb-run wct 
+- xvfb-run wct
 - if [ ${TRAVIS_PULL_REQUEST} != false ]; then wct -s 'default'; fi
-

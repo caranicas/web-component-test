@@ -4,6 +4,7 @@ const babel = require('gulp-babel');
 const flatten = require('gulp-flatten');
 const minify = require('gulp-minify');
 const uglify = require('gulp-uglify');
+const ghPages  = require('gulp-gh-pages');
 const browserSync = require('browser-sync').create();
 
 gulp.task('transpile', () =>
@@ -32,18 +33,17 @@ gulp.task('serve',(done) => {
     }
   },done);
 
-
   gulp.watch("src/**").on("change", gulp.series('transpile', 'copy', browserSync.reload));
+  gulp.watch("demo/**").on("change", gulp.series(browserSync.reload));
+
 });
 
-gulp.task('build', gulp.series('transpile', 'copy'));
-gulp.task('default', gulp.series('build', 'serve'));
-
-
-
-var ghPages  = require('gulp-gh-pages');
-gulp.task('deploy', function() {
-  //return gulp.src("./pages-build/**/*")
+gulp.task('pages', function() {
   return gulp.src(["./index.html","./demo/*","./test/*", "./bower_components/**/*"],{base: '.'})
   .pipe(ghPages());
 });
+
+gulp.task('build', gulp.series('transpile', 'copy'));
+gulp.task('pages-deployment', gulp.series('build', 'pages'));
+
+gulp.task('default', gulp.series('build', 'serve'));

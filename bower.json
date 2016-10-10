@@ -2,7 +2,7 @@
   "name": "web-component-test",
   "author":"kendrick caranicas",
   "version": "1.0.0",
-  "description": "nada",
+  "description": "tests the generator",
   "private": true,
   "license": "https://github.com/caranicas/web-component-test/LICENSE.txt",
   "homepage": "https://github.com/caranicas/web-component-test",
