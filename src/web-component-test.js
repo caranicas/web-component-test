@@ -41,7 +41,7 @@
      * @return {null}
      */
     _bar: function () {
-      return false;
+      return true;
     }
 
     /**
